@@ -5,6 +5,12 @@ export interface Task {
 }
 
 export class Todo{
+
+  constructor(id: Date, description: string) {
+    this.id = id;
+    this.description = description;
+  }
+
   id: Date = new Date();
   description: string = '';
 

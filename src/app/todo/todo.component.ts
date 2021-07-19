@@ -14,7 +14,7 @@ export class TodoComponent implements OnInit {
 
   visible: boolean = false;
 
-  public items: string[] = [];
+  public items: Todo[] = [];
 
   /* A two-way binding performed which
      pushes text on division */
@@ -30,7 +30,7 @@ export class TodoComponent implements OnInit {
     else {
       if (this.newTask == '') {
       } else {
-        this.items.push(this.newTask);
+        this.items.push(new Todo(new Date(),this.newTask));
         this.newTask = '';
         this.visible = false;
       }
@@ -39,8 +39,8 @@ export class TodoComponent implements OnInit {
 
   /* This function takes to input the
      task, that has to be deleted*/
-  public deleteTask(index: number) {
-    this.items.splice(index, 1);
+  public deleteTask(index: Date) {
+    this.items.splice(Todo.value(this.items,index), 1);
   }
 
   clear() {
