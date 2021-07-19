@@ -1,0 +1,16 @@
+.md-button {
+  line-height: 1.6rem;
+  min-width: 0;
+  width: 6.6rem;
+  height: 6.6rem;
+  border-radius: 50%;
+}
+.delete{
+  background-color: red;
+}
+.add{
+  background-color: orange;
+}
+.remove{
+  background-color: #336699;
+}
